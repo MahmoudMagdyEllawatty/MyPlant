@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.myplant">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyPlant">
+        <activity android:name=".activities.user.UserComplaintsActivity"/>
+        <activity android:name=".activities.user.ChatDetailsActivity" />
+        <activity android:name=".activities.user.ChatsActivity" />
+        <activity android:name=".activities.user.ExploreFarmersActivity" />
+        <activity android:name=".activities.user.ExplorePlantsActivity" />
+        <activity android:name=".activities.farmer.OrderDetailsActivity" />
+        <activity android:name=".activities.farmer.OrdersActivity" />
+        <activity android:name=".activities.farmer.MyPlantsActivity" />
+        <activity android:name=".activities.farmer.SellPlantActivity" />
+        <activity android:name=".activities.farmer.ExplorePlantsActivity" />
+        <activity android:name=".activities.admin.FarmerDataActivity" />
+        <activity android:name=".activities.admin.FarmerAccountsActivity" />
+        <activity android:name=".activities.admin.ComplaintListActivity" />
+        <activity android:name=".activities.admin.PlantCategoryListActivity" />
+        <activity android:name=".activities.admin.PlantDataActivity" />
+        <activity android:name=".activities.admin.PlantsListAcitivity" />
+        <activity android:name=".activities.user.UserDashboard" />
+        <activity android:name=".activities.farmer.FarmerDashboard" />
+        <activity android:name=".activities.admin.AdminDashboard" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.app.myplant.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <!-- ressource file to create -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+            </meta-data>
+        </provider>
+    </application>
+
+</manifest>
