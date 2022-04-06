@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.app.myplant.R;
+import com.app.myplant.activities.user.IdentifyImageActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent mainIntent = new Intent(MainActivity.this, LoginActivity.class);
+                //Intent mainIntent = new Intent(MainActivity.this, IdentifyImageActivity.class);
                 mainIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(mainIntent);
             }

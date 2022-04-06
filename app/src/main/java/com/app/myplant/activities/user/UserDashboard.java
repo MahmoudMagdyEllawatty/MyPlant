@@ -3,12 +3,14 @@ package com.app.myplant.activities.user;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
 import com.app.myplant.R;
 import com.app.myplant.activities.MainActivity;
 import com.app.myplant.activities.admin.AdminDashboard;
+import com.app.myplant.activities.admin.InstructionsListActivity;
 import com.app.myplant.activities.farmer.FarmerDashboard;
 import com.app.myplant.activities.farmer.OrdersActivity;
 import com.app.myplant.helper.SharedData;
@@ -28,6 +30,17 @@ public class UserDashboard extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
+
+        (findViewById(R.id.instructions))
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        SharedData.isUser = true;
+                        Intent intent = new Intent(UserDashboard.this, InstructionsListActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
 
         (findViewById(R.id.plants))
                 .setOnClickListener(new View.OnClickListener() {

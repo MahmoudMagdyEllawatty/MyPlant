@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_5"
     android:padding="16dp"
-    tools:context=".activities.farmer.ExplorePlantsActivity">
+    android:background="@color/grey_5"
+    tools:context=".activities.admin.InstructionsListActivity">
 
 
     <LinearLayout
@@ -51,24 +51,10 @@
 
         </com.facebook.shimmer.ShimmerFrameLayout>
 
-
-        <EditText
-            android:background="@mipmap/edit_bg"
-            android:textColorHint="#333"
-            android:hint="@string/enter_text_to_search"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:drawableStart="@android:drawable/ic_menu_search"
-            android:id="@+id/search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/swipeToRefresh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/cart_recyclerview"
                 android:layout_width="match_parent"
@@ -96,7 +82,6 @@
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -111,10 +96,9 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:clickable="true"
-            app:srcCompat="@drawable/ic_search"
+            app:srcCompat="@drawable/ic_add"
             tools:ignore="VectorDrawableCompat" />
 
     </LinearLayout>
-
 
 </RelativeLayout>

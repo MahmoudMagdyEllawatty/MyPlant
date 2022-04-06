@@ -14,7 +14,10 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPlant">
-        <activity android:name=".activities.user.UserComplaintsActivity"/>
+        <activity android:name=".activities.admin.AddInstuctionActivity"></activity>
+        <activity android:name=".activities.admin.InstructionsListActivity" />
+        <activity android:name=".activities.user.IdentifyImageActivity" />
+        <activity android:name=".activities.user.UserComplaintsActivity" />
         <activity android:name=".activities.user.ChatDetailsActivity" />
         <activity android:name=".activities.user.ChatsActivity" />
         <activity android:name=".activities.user.ExploreFarmersActivity" />
@@ -48,11 +51,11 @@
             android:authorities="com.app.myplant.provider"
             android:exported="false"
             android:grantUriPermissions="true">
+
             <!-- ressource file to create -->
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths">
-            </meta-data>
+                android:resource="@xml/file_paths" />
         </provider>
     </application>
 

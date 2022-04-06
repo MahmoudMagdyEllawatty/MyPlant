@@ -1,15 +1,11 @@
 package com.app.myplant.adapter;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,23 +14,27 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.myplant.R;
+import com.app.myplant.activities.admin.AddInstuctionActivity;
 import com.app.myplant.activities.admin.PlantDataActivity;
+import com.app.myplant.callback.InstructionCallback;
 import com.app.myplant.callback.PlantCallback;
+import com.app.myplant.controllers.InstructionController;
 import com.app.myplant.controllers.PlantController;
 import com.app.myplant.helper.LoadingHelper;
 import com.app.myplant.helper.SharedData;
+import com.app.myplant.model.Instruction;
 import com.app.myplant.model.Plant;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 
-public class PlantAdapter extends RecyclerView.Adapter<PlantAdapter.ViewHolder> {
+public class InstructionsAdapter extends RecyclerView.Adapter<InstructionsAdapter.ViewHolder> {
 
-    private ArrayList<Plant> Plants;
+    private ArrayList<Instruction> Plants;
     private Context context;
 
-    public PlantAdapter(ArrayList<Plant> Plants, Context context) {
+    public InstructionsAdapter(ArrayList<Instruction> Plants, Context context) {
         this.Plants = Plants;
         this.context = context;
     }
@@ -49,11 +49,14 @@ public class PlantAdapter extends RecyclerView.Adapter<PlantAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Plant Plant = Plants.get(position);
+        Instruction Plant = Plants.get(position);
 
-        holder.title.setText(Plant.getName());
-        holder.category.setText(Plant.getCategory().getName());
-        holder.description.setText(Plant.getDetails());
+        holder.title.setText(Plant.getTitle());
+        holder.description.setText(Plant.getDescription());
+        if(Plant.getPlantCategory() != null)
+            holder.category.setText(Plant.getPlantCategory().getName());
+        else
+            holder.category.setText("");
 
         Picasso.get()
                 .load(Plant.getImageURL())
@@ -64,12 +67,12 @@ public class PlantAdapter extends RecyclerView.Adapter<PlantAdapter.ViewHolder> 
             @Override
             public void onClick(View view) {
                 new LoadingHelper(context)
-                        .showDialog("Delete Plant", "Are You Sure?", "Delete", "Cancel", new DialogInterface.OnClickListener() {
+                        .showDialog("Delete Instruction", "Are You Sure?", "Delete", "Cancel", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                new PlantController().delete(Plant, new PlantCallback() {
+                                new InstructionController().delete(Plant, new InstructionCallback() {
                                     @Override
-                                    public void onSuccess(ArrayList<Plant> Plants) {
+                                    public void onSuccess(ArrayList<Instruction> Plants) {
                                         Toast.makeText(context, "Deleted!!", Toast.LENGTH_SHORT).show();
                                     }
 
@@ -92,8 +95,8 @@ public class PlantAdapter extends RecyclerView.Adapter<PlantAdapter.ViewHolder> 
         holder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedData.plant = Plant;
-                Intent intent = new Intent(context, PlantDataActivity.class);
+                SharedData.instruction = Plant;
+                Intent intent = new Intent(context, AddInstuctionActivity.class);
                 context.startActivity(intent);
             }
         });

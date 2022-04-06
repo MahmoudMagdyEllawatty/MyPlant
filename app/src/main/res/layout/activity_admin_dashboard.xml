@@ -19,7 +19,6 @@
 
     <ImageView
         android:id="@+id/plants"
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@mipmap/plants"
@@ -27,21 +26,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/plant_types" />
 
+    <ImageView
+        android:id="@+id/instructions"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/instructions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plants" />
 
+    
+    
     <ImageView
         android:id="@+id/complaints"
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@mipmap/complaints"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plants" />
+        app:layout_constraintTop_toBottomOf="@+id/instructions" />
 
 
     <ImageView
         android:id="@+id/farmers"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@mipmap/farmers"
@@ -52,7 +61,7 @@
 
     <ImageView
         android:id="@+id/logout"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@mipmap/logout"

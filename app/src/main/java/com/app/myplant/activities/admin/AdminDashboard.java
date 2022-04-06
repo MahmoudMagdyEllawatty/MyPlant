@@ -45,6 +45,16 @@ public class AdminDashboard extends AppCompatActivity {
                     }
                 });
 
+        (findViewById(R.id.instructions))
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        SharedData.isUser = false;
+                        Intent intent = new Intent(AdminDashboard.this,InstructionsListActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
         (findViewById(R.id.farmers))
                 .setOnClickListener(new View.OnClickListener() {
                     @Override

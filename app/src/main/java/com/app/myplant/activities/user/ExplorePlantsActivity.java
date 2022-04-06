@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -26,6 +27,7 @@ import com.app.myplant.controllers.PlantController;
 import com.app.myplant.model.FarmerPlant;
 import com.app.myplant.model.Plant;
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -40,7 +42,7 @@ public class ExplorePlantsActivity extends AppCompatActivity {
 
     ArrayList<Plant> allPlants,filteredPlants;
     EditText search;
-
+    FloatingActionButton add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,7 @@ public class ExplorePlantsActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(R.string.explore_plants);
 
 
+        add = findViewById(R.id.fab_add);
         no_data_fount = findViewById(R.id.no_data_fount);
         recyclerView = findViewById(R.id.cart_recyclerview);
         imgNoProduct = findViewById(R.id.image_no_product);
@@ -75,6 +78,14 @@ public class ExplorePlantsActivity extends AppCompatActivity {
 
 
         loadData();
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ExplorePlantsActivity.this,IdentifyImageActivity.class);
+                startActivity(intent);
+            }
+        });
 
         search = findViewById(R.id.search);
 

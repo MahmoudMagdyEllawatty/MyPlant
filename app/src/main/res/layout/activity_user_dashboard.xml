@@ -23,7 +23,7 @@
 
     <ImageView
         android:id="@+id/my_orders"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@mipmap/orders"
@@ -33,7 +33,7 @@
 
     <ImageView
         android:id="@+id/chat"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@mipmap/chat"
@@ -41,20 +41,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/my_orders" />
 
+
     <ImageView
-        android:id="@+id/complaints"
-        android:layout_marginTop="10dp"
+        android:id="@+id/instructions"
+        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@mipmap/complaints"
+        android:background="@mipmap/instructions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chat" />
 
 
     <ImageView
+        android:id="@+id/complaints"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/complaints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructions" />
+
+
+    <ImageView
         android:id="@+id/logout"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@mipmap/logout"

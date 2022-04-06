@@ -8,5 +8,6 @@ public class Config {
     public static final String ORDER_NODE ="orders";
     public static final String PLANT_NODE ="plants";
     public static final String PLANT_CATEGORY_NODE ="plant_categories";
+    public static final String INSTRUCTIONS_NODE ="instruction";
     public static final String USER_NODE ="users";
 }
