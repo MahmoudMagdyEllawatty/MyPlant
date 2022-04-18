@@ -37,6 +37,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_gradient));
+        getSupportActionBar().setTitle("Login");
+
         loadingHelper = new LoadingHelper(this);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);

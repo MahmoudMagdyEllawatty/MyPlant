@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/back"
+    android:background="@color/purple_500"
     tools:context=".activities.admin.AddInstuctionActivity">
 
     <androidx.core.widget.NestedScrollView
@@ -87,6 +87,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <EditText
+                    android:gravity="top|start"
+                    android:layout_gravity="center"
+                    android:minLines="6"
+                    android:lines="7"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
                     android:textColorHint="#333"
                     android:layout_marginBottom="10dp"
                     android:id="@+id/etxt_details"
@@ -97,7 +103,7 @@
                     android:layout_marginRight="10dp"
                     android:background="@mipmap/edit_bg"
                     android:hint="@string/inst_desc"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
                     android:padding="16dp"
                     android:paddingStart="32dp"
                     android:paddingEnd="32dp"

@@ -53,7 +53,7 @@
                         android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/purple_500"
+                        android:textColor="@color/black"
                         android:textSize="20sp" />
 
                     <TextView
@@ -95,14 +95,26 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:orientation="horizontal">
+                    <android.widget.Button
+                        android:textAllCaps="false"
+                        android:background="@drawable/bg_info_3"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:text="@string/plant_details"
+                        android:layout_weight="2"
+                        android:id="@+id/details"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"/>
+
                     <TextView
-                        android:layout_weight="3"
+                        android:layout_weight="1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"/>
 
-                    <Button
+                    <android.widget.Button
                         android:textAllCaps="false"
-                        android:background="@mipmap/bg_small_1"
+                        android:background="@drawable/bg_info_3"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:text="@string/check_farmers"

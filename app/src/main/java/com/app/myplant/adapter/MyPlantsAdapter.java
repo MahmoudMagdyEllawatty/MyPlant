@@ -20,9 +20,7 @@ import com.app.myplant.R;
 import com.app.myplant.callback.FarmerPlantCallback;
 import com.app.myplant.controllers.FarmerPlantController;
 import com.app.myplant.helper.LoadingHelper;
-import com.app.myplant.helper.SharedData;
 import com.app.myplant.model.FarmerPlant;
-import com.app.myplant.model.Plant;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -52,7 +50,7 @@ public class MyPlantsAdapter extends RecyclerView.Adapter<MyPlantsAdapter.ViewHo
 
         holder.title.setText(Plant.getPlant().getName());
         holder.category.setText(Plant.getPlant().getCategory().getName());
-        holder.description.setText(Plant.getPlant().getDetails());
+        holder.description.setText(Plant.getPlant().getSunExposure());
         holder.price.setText(Plant.getPrice()+" KWD");
 
         Picasso.get()

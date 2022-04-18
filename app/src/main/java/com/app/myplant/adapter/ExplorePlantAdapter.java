@@ -1,27 +1,21 @@
 package com.app.myplant.adapter;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.myplant.R;
+import com.app.myplant.activities.farmer.PlantDetailsActivity;
 import com.app.myplant.activities.user.ExploreFarmersActivity;
-import com.app.myplant.callback.FarmerPlantCallback;
-import com.app.myplant.controllers.FarmerPlantController;
 import com.app.myplant.helper.SharedData;
-import com.app.myplant.model.FarmerPlant;
 import com.app.myplant.model.Plant;
 import com.squareup.picasso.Picasso;
 
@@ -52,7 +46,7 @@ public class ExplorePlantAdapter extends RecyclerView.Adapter<ExplorePlantAdapte
 
         holder.title.setText(Plant.getName());
         holder.category.setText(Plant.getCategory().getName());
-        holder.description.setText(Plant.getDetails());
+        holder.description.setText(Plant.getSunExposure());
 
         Picasso.get()
                 .load(Plant.getImageURL())
@@ -65,6 +59,24 @@ public class ExplorePlantAdapter extends RecyclerView.Adapter<ExplorePlantAdapte
             public void onClick(View view) {
                 SharedData.current_plant = Plant;
                 Intent intent = new Intent(context, ExploreFarmersActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedData.infoPlant = Plant;
+                Intent intent = new Intent(context, PlantDetailsActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
+        holder.details.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedData.infoPlant = Plant;
+                Intent intent = new Intent(context, PlantDetailsActivity.class);
                 context.startActivity(intent);
             }
         });
@@ -82,10 +94,11 @@ public class ExplorePlantAdapter extends RecyclerView.Adapter<ExplorePlantAdapte
 
         TextView title,description,category;
         ImageView image;
-        Button sell;
+        Button sell,details;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            details = itemView.findViewById(R.id.details);
             image = itemView.findViewById(R.id.image);
             title = itemView.findViewById(R.id.title);
             description = itemView.findViewById(R.id.description);

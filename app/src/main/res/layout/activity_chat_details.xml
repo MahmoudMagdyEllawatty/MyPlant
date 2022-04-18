@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_500"
     tools:context=".activities.user.ChatDetailsActivity">
 
 
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:tint="@color/purple_500"
+            android:tint="@color/purple_200"
             android:src="@drawable/ic_send"
             android:layout_alignParentEnd="true"
             android:id="@+id/send"

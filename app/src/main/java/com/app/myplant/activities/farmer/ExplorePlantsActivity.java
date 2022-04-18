@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -17,9 +16,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.myplant.R;
-import com.app.myplant.activities.admin.PlantDataActivity;
-import com.app.myplant.activities.admin.PlantsListAcitivity;
-import com.app.myplant.adapter.PlantAdapter;
 import com.app.myplant.adapter.SellPlantAdapter;
 import com.app.myplant.callback.FarmerPlantCallback;
 import com.app.myplant.callback.PlantCallback;
@@ -105,7 +101,7 @@ public class ExplorePlantsActivity extends AppCompatActivity {
         for (Plant plant : allPlants){
             if(plant.getName().toLowerCase().contains(text.toLowerCase()) ||
             plant.getCategory().getName().toLowerCase().contains(text.toLowerCase()) ||
-            plant.getDetails().toLowerCase().contains(text.toLowerCase())){
+            plant.getSunExposure().toLowerCase().contains(text.toLowerCase())){
                 filteredPlants.add(plant);
             }
         }

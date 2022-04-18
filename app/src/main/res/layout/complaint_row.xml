@@ -49,7 +49,7 @@
                         android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/purple_500"
+                        android:textColor="@color/black"
                         android:textSize="20sp" />
 
 
@@ -57,7 +57,7 @@
                         android:id="@+id/user"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/purple_500"
+                        android:textColor="@color/black"
                         android:textSize="20sp" />
 
                     <TextView
@@ -85,7 +85,7 @@
                         android:padding="16dp"
                         android:paddingStart="32dp"
                         android:paddingEnd="32dp"
-                        android:textColor="@color/purple_500"
+                        android:textColor="@color/black"
                         android:textSize="16sp" />
 
                     <Button

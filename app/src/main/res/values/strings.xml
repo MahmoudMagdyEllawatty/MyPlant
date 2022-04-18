@@ -49,6 +49,14 @@
     <string name="inst_desc">Instruction Details</string>
     <string name="image">Image</string>
     <string name="type">Type</string>
+    <string name="sun_exposure">Sun Exposure</string>
+    <string name="soil_type">Soil Type</string>
+    <string name="bloom_time">Bloom Time</string>
+    <string name="color">Color</string>
+    <string name="native_area">Native Area</string>
+    <string name="toxicity">Toxicity</string>
+    <string name="water">Water</string>
+    <string name="explore_farmers">Explore Farmers</string>
 
     <array name="types">
         <item>Financial Issue</item>

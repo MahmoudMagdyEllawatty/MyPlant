@@ -43,7 +43,7 @@ public class ExploreFarmersActivity extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_gradient));
         getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
-        getSupportActionBar().setTitle(R.string.explore_plants);
+        getSupportActionBar().setTitle(R.string.explore_farmers);
 
 
         no_data_fount = findViewById(R.id.no_data_fount);

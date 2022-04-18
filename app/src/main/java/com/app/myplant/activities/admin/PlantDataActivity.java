@@ -43,15 +43,12 @@ import com.app.myplant.model.Plant;
 import com.app.myplant.model.PlantCategory;
 import com.squareup.picasso.Picasso;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
-import java.util.Locale;
 
 public class PlantDataActivity extends AppCompatActivity {
 
-    EditText etxt_name ,etxt_category, etxt_details;
+    EditText etxt_name ,etxt_category, etxt_details,etxtSoilType,etxtBloomTime,etxtExpocity,etxtColor,etxtNativeArea,etxtWater;
     ImageView plantImage;
     Plant plant;
     TextView txt_save;
@@ -76,9 +73,17 @@ public class PlantDataActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
         getSupportActionBar().setTitle(R.string.plant_date);
 
+        etxtWater = findViewById(R.id.etxt_water);
         etxt_category= findViewById(R.id.etxt_category);
         etxt_details = findViewById(R.id.etxt_details);
         etxt_name = findViewById(R.id.etxt_name);
+        etxtBloomTime = findViewById(R.id.etxt_bloom_time);
+        etxtColor = findViewById(R.id.etxt_color);
+        etxtSoilType = findViewById(R.id.etxt_soil);
+        etxtExpocity = findViewById(R.id.etxt_toxicity);
+        etxtNativeArea = findViewById(R.id.etxt_native_area);
+
+
         txt_save = findViewById(R.id.txt_save);
         plantImage = findViewById(R.id.plant_image);
 
@@ -89,8 +94,15 @@ public class PlantDataActivity extends AppCompatActivity {
         }else{
             plant = SharedData.plant;
             etxt_name.setText(plant.getName());
-            etxt_details.setText(plant.getDetails());
+            etxt_details.setText(plant.getSunExposure());
             etxt_category.setText(plant.getCategory().getName());
+            etxtExpocity.setText(plant.getToxicity());
+            etxtNativeArea.setText(plant.getNativeArea());
+            etxtSoilType.setText(plant.getSoilType());
+            etxtColor.setText(plant.getColor());
+            etxtBloomTime.setText(plant.getBloomTime());
+            etxtWater.setText(plant.getWater());
+
             selectedCategory = plant.getCategory();
 
             Picasso.get()
@@ -209,15 +221,71 @@ public class PlantDataActivity extends AppCompatActivity {
                     return;
                 }
 
+                if(etxtBloomTime.getText() == null){
+                    etxtBloomTime.setError(getString(R.string.required));
+                    return;
+                }else if(etxtBloomTime.getText().toString().equals("")){
+                    etxtBloomTime.setError(getString(R.string.required));
+                    return;
+                }
+
+                if(etxtColor.getText() == null){
+                    etxtColor.setError(getString(R.string.required));
+                    return;
+                }else if(etxtColor.getText().toString().equals("")){
+                    etxtColor.setError(getString(R.string.required));
+                    return;
+                }
+
+                if(etxtSoilType.getText() == null){
+                    etxtSoilType.setError(getString(R.string.required));
+                    return;
+                }else if(etxtSoilType.getText().toString().equals("")){
+                    etxtSoilType.setError(getString(R.string.required));
+                    return;
+                }
+
+                if(etxtExpocity.getText() == null){
+                    etxtExpocity.setError(getString(R.string.required));
+                    return;
+                }else if(etxtExpocity.getText().toString().equals("")){
+                    etxtExpocity.setError(getString(R.string.required));
+                    return;
+                }
+                if(etxtNativeArea.getText() == null){
+                    etxtNativeArea.setError(getString(R.string.required));
+                    return;
+                }else if(etxtNativeArea.getText().toString().equals("")){
+                    etxtNativeArea.setError(getString(R.string.required));
+                    return;
+                }
+
+
+                if(etxtWater.getText() == null){
+                    etxtWater.setError(getString(R.string.required));
+                    return;
+                }else if(etxtWater.getText().toString().equals("")){
+                    etxtWater.setError(getString(R.string.required));
+                    return;
+                }
+
+
+
                 if(imageURL.equals("")){
                     Toast.makeText(PlantDataActivity.this, "Please,Select Plant Image First", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 plant.setCategory(selectedCategory);
-                plant.setDetails(etxt_details.getText().toString());
+                plant.setSunExposure(etxt_details.getText().toString());
                 plant.setImageURL(imageURL);
                 plant.setName(etxt_name.getText().toString());
+                plant.setBloomTime(etxtBloomTime.getText().toString());
+                plant.setColor(etxtColor.getText().toString());
+                plant.setNativeArea(etxtNativeArea.getText().toString());
+                plant.setSoilType(etxtSoilType.getText().toString());
+                plant.setToxicity(etxtExpocity.getText().toString());
+                plant.setWater(etxtWater.getText().toString());
 
 
                 loadingHelper.showLoading("Saving Data");

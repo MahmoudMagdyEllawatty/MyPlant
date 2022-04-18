@@ -54,7 +54,7 @@
                         android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/purple_500"
+                        android:textColor="@color/black"
                         android:textSize="20sp" />
 
                     <TextView
@@ -101,10 +101,10 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"/>
 
-                    <Button
+                    <android.widget.Button
                         android:layout_marginEnd="10dp"
                         android:textAllCaps="false"
-                        android:background="@mipmap/bg_small_1"
+                        android:background="@drawable/bg_info_3"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:text="@string/chat"
@@ -114,9 +114,9 @@
                         android:layout_height="40dp"
                         android:layout_marginTop="10dp"/>
 
-                    <Button
+                    <android.widget.Button
                         android:textAllCaps="false"
-                        android:background="@mipmap/bg_small_1"
+                        android:background="@drawable/bg_info_3"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:text="@string/make_order"

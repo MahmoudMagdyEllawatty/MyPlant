@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.myplant.R;
 import com.app.myplant.activities.admin.AddInstuctionActivity;
+import com.app.myplant.activities.user.InstructionActivity;
 import com.app.myplant.callback.InstructionCallback;
 import com.app.myplant.controllers.InstructionController;
 import com.app.myplant.helper.LoadingHelper;
@@ -48,7 +49,7 @@ public class UserInstructionsAdapter extends RecyclerView.Adapter<UserInstructio
         Instruction Plant = Plants.get(position);
 
         holder.title.setText(Plant.getTitle());
-        holder.description.setText(Plant.getDescription());
+        holder.description.setText("");
         if(Plant.getPlantCategory() != null)
             holder.category.setText(Plant.getPlantCategory().getName());
         else
@@ -58,6 +59,15 @@ public class UserInstructionsAdapter extends RecyclerView.Adapter<UserInstructio
                 .load(Plant.getImageURL())
                 .into(holder.image);
 
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedData.userInstruction = Plant;
+                Intent intent = new Intent(context, InstructionActivity.class);
+                context.startActivity(intent);
+            }
+        });
 
     }
 

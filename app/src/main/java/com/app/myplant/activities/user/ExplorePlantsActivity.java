@@ -17,14 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.myplant.R;
-import com.app.myplant.activities.admin.ComplaintListActivity;
 import com.app.myplant.adapter.ExplorePlantAdapter;
-import com.app.myplant.adapter.SellPlantAdapter;
-import com.app.myplant.callback.FarmerPlantCallback;
 import com.app.myplant.callback.PlantCallback;
-import com.app.myplant.controllers.FarmerPlantController;
 import com.app.myplant.controllers.PlantController;
-import com.app.myplant.model.FarmerPlant;
 import com.app.myplant.model.Plant;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -114,7 +109,7 @@ public class ExplorePlantsActivity extends AppCompatActivity {
         for (Plant plant : allPlants){
             if(plant.getName().toLowerCase().contains(text.toLowerCase()) ||
                     plant.getCategory().getName().toLowerCase().contains(text.toLowerCase()) ||
-                    plant.getDetails().toLowerCase().contains(text.toLowerCase())){
+                    plant.getSunExposure().toLowerCase().contains(text.toLowerCase())){
                 filteredPlants.add(plant);
             }
         }

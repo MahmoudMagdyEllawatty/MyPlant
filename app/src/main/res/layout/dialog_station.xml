@@ -25,7 +25,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 app:srcCompat="@drawable/ic_close"
                 tools:ignore="VectorDrawableCompat"
-                app:tint="@android:color/white" />
+                app:tint="@color/text_color" />
 
             <TextView
                 android:id="@+id/title"
@@ -34,7 +34,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
-                android:textColor="@android:color/white" />
+                android:textColor="@color/text_color" />
 
             <Button
                 android:id="@+id/btn_submit"
@@ -43,7 +43,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="@string/submit"
-                android:textColor="@android:color/white" />
+                android:textColor="@color/text_color" />
 
         </LinearLayout>
 
@@ -97,7 +97,7 @@
                     android:padding="16dp"
                     android:paddingStart="32dp"
                     android:paddingEnd="32dp"
-                    android:textColor="@color/purple_500"
+                    android:textColor="@color/text_color"
                     android:textSize="16sp" />
 
             </LinearLayout>

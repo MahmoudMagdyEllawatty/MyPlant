@@ -20,6 +20,10 @@ public class FarmerDashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_farmer_dashboard);
 
+
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_gradient));
+        getSupportActionBar().setTitle("Farmer Dashboard");
+
         (findViewById(R.id.my_plants))
                 .setOnClickListener(new View.OnClickListener() {
                     @Override

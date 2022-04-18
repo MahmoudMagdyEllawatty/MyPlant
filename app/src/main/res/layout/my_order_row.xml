@@ -53,7 +53,7 @@
                         android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/purple_500"
+                        android:textColor="@color/black"
                         android:textSize="20sp" />
 
                     <TextView
@@ -134,7 +134,7 @@
                             android:layout_marginTop="10dp"
                             app:srcCompat="@drawable/check"
                             tools:ignore="VectorDrawableCompat"
-                            app:tint="@color/purple_500" />
+                            app:tint="@color/text_color" />
 
                         <ImageView
                             android:layout_weight="1"

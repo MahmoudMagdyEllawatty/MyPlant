@@ -52,7 +52,7 @@ public class InstructionsAdapter extends RecyclerView.Adapter<InstructionsAdapte
         Instruction Plant = Plants.get(position);
 
         holder.title.setText(Plant.getTitle());
-        holder.description.setText(Plant.getDescription());
+        holder.description.setText("");
         if(Plant.getPlantCategory() != null)
             holder.category.setText(Plant.getPlantCategory().getName());
         else

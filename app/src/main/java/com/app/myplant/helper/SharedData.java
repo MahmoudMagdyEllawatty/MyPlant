@@ -28,4 +28,7 @@ public class SharedData {
 
     public static String secret;
     public static boolean isUser;
+    public static Plant infoPlant;
+    public static boolean isSell;
+    public static Instruction userInstruction;
 }

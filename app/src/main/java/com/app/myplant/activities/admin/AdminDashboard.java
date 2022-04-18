@@ -18,6 +18,9 @@ public class AdminDashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_dashboard);
 
+
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_gradient));
+        getSupportActionBar().setTitle("Admin Dashboard");
         (findViewById(R.id.plant_types))
                 .setOnClickListener(new View.OnClickListener() {
                     @Override

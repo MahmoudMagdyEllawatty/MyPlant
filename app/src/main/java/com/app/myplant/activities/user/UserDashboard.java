@@ -21,7 +21,8 @@ public class UserDashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_dashboard);
-
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_gradient));
+        getSupportActionBar().setTitle("User Dashboard");
         (findViewById(R.id.my_orders))
                 .setOnClickListener(new View.OnClickListener() {
                     @Override

@@ -1,15 +1,11 @@
 package com.app.myplant.adapter;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -53,7 +49,7 @@ public class PlantAdapter extends RecyclerView.Adapter<PlantAdapter.ViewHolder> 
 
         holder.title.setText(Plant.getName());
         holder.category.setText(Plant.getCategory().getName());
-        holder.description.setText(Plant.getDetails());
+        holder.description.setText(Plant.getSunExposure());
 
         Picasso.get()
                 .load(Plant.getImageURL())

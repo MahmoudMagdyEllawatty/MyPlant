@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/purple_500"
+    android:padding="20dp"
+    tools:context=".activities.farmer.PlantDetailsActivity">
+
+
+    <LinearLayout
+        android:background="@drawable/bg_info_2"
+        android:weightSum="5"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:text="Plant Type"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/plant_type"
+            android:textStyle="bold"
+            android:text="Plant Type"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/bg_info"
+        android:weightSum="5"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:text="@string/sun_exposure"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/sun_exposure"
+            android:textStyle="bold"
+            android:text="Plant Type"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/bg_info_2"
+        android:weightSum="5"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:text="@string/soil_type"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/soil_type"
+            android:textStyle="bold"
+            android:text="Plant Type"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/bg_info"
+        android:weightSum="5"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:text="@string/bloom_time"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/bloom_time"
+            android:textStyle="bold"
+            android:text="Plant Type"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/bg_info_2"
+        android:weightSum="5"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:text="@string/color"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/color"
+            android:textStyle="bold"
+            android:text="Plant Type"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/bg_info"
+        android:weightSum="5"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:text="@string/native_area"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/native_area"
+            android:textStyle="bold"
+            android:text="Plant Type"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/bg_info_2"
+        android:weightSum="5"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:text="@string/toxicity"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/toxicity"
+            android:textStyle="bold"
+            android:text="Plant Type"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@drawable/bg_info"
+        android:weightSum="5"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:text="@string/water"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/water"
+            android:textStyle="bold"
+            android:text="Plant Type"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/sell"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:text="Sell This Plant"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_info_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

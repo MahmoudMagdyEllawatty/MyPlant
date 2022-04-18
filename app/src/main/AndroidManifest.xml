@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPlant">
-        <activity android:name=".activities.admin.AddInstuctionActivity"></activity>
+        <activity android:name=".activities.user.InstructionActivity"></activity>
+        <activity android:name=".activities.farmer.PlantDetailsActivity" />
+        <activity android:name=".activities.admin.AddInstuctionActivity" />
         <activity android:name=".activities.admin.InstructionsListActivity" />
         <activity android:name=".activities.user.IdentifyImageActivity" />
         <activity android:name=".activities.user.UserComplaintsActivity" />
